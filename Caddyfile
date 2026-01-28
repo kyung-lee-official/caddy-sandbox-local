@@ -29,3 +29,23 @@ next.sandbox.localhost {
 		output file ./caddy.log
 	}
 }
+
+medusa.sandbox.localhost {
+	tls "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.localhost.pem" "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.localhost-key.pem"
+
+	reverse_proxy localhost:9000
+
+	log {
+		output file ./caddy.log
+	}
+}
+# HMR
+medusa.sandbox.localhost:5174 {
+	tls "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.localhost.pem" "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.localhost-key.pem"
+
+	reverse_proxy localhost:5173
+
+	log {
+		output file ./caddy.log
+	}
+}
