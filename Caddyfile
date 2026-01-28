@@ -1,5 +1,7 @@
+# Reminder: X.509 wildcards only go one level deep, so this won't match a.b.sandbox.localhost ℹ️
+
 bun.sandbox.localhost {
-	tls "C:/Users/wulfr/.ssh/certificates/sandbox.localhost.pem" "C:/Users/wulfr/.ssh/certificates/sandbox.localhost-key.pem"
+	tls "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.localhost.pem" "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.localhost-key.pem"
 
 	reverse_proxy localhost:5000
 
@@ -9,7 +11,7 @@ bun.sandbox.localhost {
 }
 
 vite.sandbox.localhost {
-	tls "C:/Users/wulfr/.ssh/certificates/sandbox.localhost.pem" "C:/Users/wulfr/.ssh/certificates/sandbox.localhost-key.pem"
+	tls "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.localhost.pem" "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.localhost-key.pem"
 
 	reverse_proxy localhost:5173
 
@@ -19,7 +21,7 @@ vite.sandbox.localhost {
 }
 
 next.sandbox.localhost {
-	tls "C:/Users/wulfr/.ssh/certificates/sandbox.localhost.pem" "C:/Users/wulfr/.ssh/certificates/sandbox.localhost-key.pem"
+	tls "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.localhost.pem" "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.localhost-key.pem"
 
 	reverse_proxy localhost:4000
 
