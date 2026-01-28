@@ -1,7 +1,7 @@
 # Reminder: X.509 wildcards only go one level deep, so this won't match a.b.sandbox.local ℹ️
 
 bun.sandbox.local {
-	tls "C:/Users/wulfr/AppData/Roaming/Caddy/certificates/local/_wildcard.sandbox.local/_wildcard.sandbox.local.pem" "C:/Users/wulfr/AppData/Roaming/Caddy/certificates/local/_wildcard.sandbox.local/_wildcard.sandbox.local-key.pem"
+	tls "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.local.pem" "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.local-key.pem"
 
 	reverse_proxy localhost:5000
 
@@ -11,7 +11,7 @@ bun.sandbox.local {
 }
 
 vite.sandbox.local {
-	tls "C:/Users/wulfr/AppData/Roaming/Caddy/certificates/local/_wildcard.sandbox.local/_wildcard.sandbox.local.pem" "C:/Users/wulfr/AppData/Roaming/Caddy/certificates/local/_wildcard.sandbox.local/_wildcard.sandbox.local-key.pem"
+	tls "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.local.pem" "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.local-key.pem"
 
 	reverse_proxy localhost:5173
 
@@ -21,7 +21,7 @@ vite.sandbox.local {
 }
 
 next.sandbox.local {
-	tls "C:/Users/wulfr/AppData/Roaming/Caddy/certificates/local/_wildcard.sandbox.local/_wildcard.sandbox.local.pem" "C:/Users/wulfr/AppData/Roaming/Caddy/certificates/local/_wildcard.sandbox.local/_wildcard.sandbox.local-key.pem"
+	tls "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.local.pem" "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.local-key.pem"
 
 	reverse_proxy localhost:4000
 
@@ -31,7 +31,7 @@ next.sandbox.local {
 }
 
 medusa.sandbox.local {
-	tls "C:/Users/wulfr/AppData/Roaming/Caddy/certificates/local/_wildcard.sandbox.local/_wildcard.sandbox.local.pem" "C:/Users/wulfr/AppData/Roaming/Caddy/certificates/local/_wildcard.sandbox.local/_wildcard.sandbox.local-key.pem"
+	tls "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.local.pem" "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.local-key.pem"
 
 	reverse_proxy localhost:9000
 
@@ -41,7 +41,7 @@ medusa.sandbox.local {
 }
 # HMR
 medusa.sandbox.local:5174 {
-	tls "C:/Users/wulfr/AppData/Roaming/Caddy/certificates/local/_wildcard.sandbox.local/_wildcard.sandbox.local.pem" "C:/Users/wulfr/AppData/Roaming/Caddy/certificates/local/_wildcard.sandbox.local/_wildcard.sandbox.local-key.pem"
+	tls "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.local.pem" "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.local-key.pem"
 
 	reverse_proxy localhost:5173
 
