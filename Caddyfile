@@ -1,5 +1,5 @@
-bun.localhost {
-	tls "C:/Users/wulfr/.ssh/certificates/bun.localhost.pem" "C:/Users/wulfr/.ssh/certificates/bun.localhost-key.pem"
+bun.sandbox.localhost {
+	tls "C:/Users/wulfr/.ssh/certificates/sandbox.localhost.pem" "C:/Users/wulfr/.ssh/certificates/sandbox.localhost-key.pem"
 
 	reverse_proxy localhost:5000
 
@@ -8,8 +8,8 @@ bun.localhost {
 	}
 }
 
-vite.localhost {
-	tls "C:/Users/wulfr/.ssh/certificates/vite.localhost.pem" "C:/Users/wulfr/.ssh/certificates/vite.localhost-key.pem"
+vite.sandbox.localhost {
+	tls "C:/Users/wulfr/.ssh/certificates/sandbox.localhost.pem" "C:/Users/wulfr/.ssh/certificates/sandbox.localhost-key.pem"
 
 	reverse_proxy localhost:5173
 
@@ -18,8 +18,8 @@ vite.localhost {
 	}
 }
 
-next.localhost {
-	tls "C:/Users/wulfr/.ssh/certificates/next.localhost.pem" "C:/Users/wulfr/.ssh/certificates/next.localhost-key.pem"
+next.sandbox.localhost {
+	tls "C:/Users/wulfr/.ssh/certificates/sandbox.localhost.pem" "C:/Users/wulfr/.ssh/certificates/sandbox.localhost-key.pem"
 
 	reverse_proxy localhost:4000
 
