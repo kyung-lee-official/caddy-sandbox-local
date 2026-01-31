@@ -30,6 +30,16 @@ next.sandbox.local {
 	}
 }
 
+nest.sandbox.local {
+	tls "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.local.pem" "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.local-key.pem"
+
+	reverse_proxy localhost:3001
+
+	log {
+		output file ./caddy.log
+	}
+}
+
 medusa.sandbox.local {
 	tls "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.local.pem" "C:/Users/wulfr/.ssh/certificates/_wildcard.sandbox.local-key.pem"
 
