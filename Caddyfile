@@ -23,7 +23,7 @@ vite.sandbox.local {
 next.sandbox.local {
 	tls "C:/Data/certificates/_wildcard.sandbox.local.pem" "C:/Data/certificates/_wildcard.sandbox.local-key.pem"
 
-	reverse_proxy localhost:4000
+	reverse_proxy localhost:3000
 
 	log {
 		output file ./caddy.log
