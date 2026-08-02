@@ -40,6 +40,16 @@ nest.sandbox.local {
 	}
 }
 
+axum.sandbox.local {
+	tls "C:/Data/certificates/_wildcard.sandbox.local.pem" "C:/Data/certificates/_wildcard.sandbox.local-key.pem"
+
+	reverse_proxy localhost:3002
+
+	log {
+		output file ./caddy.log
+	}
+}
+
 medusa.sandbox.local {
 	tls "C:/Data/certificates/_wildcard.sandbox.local.pem" "C:/Data/certificates/_wildcard.sandbox.local-key.pem"
 

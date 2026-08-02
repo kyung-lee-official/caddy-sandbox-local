@@ -1,2 +1,3 @@
 caddy.exe
-caddy.log
+*.log
+*.log.gz
