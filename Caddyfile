@@ -30,6 +30,16 @@ next.sandbox.local {
 	}
 }
 
+elysia.sandbox.local {
+	tls "C:/Data/certificates/_wildcard.sandbox.local.pem" "C:/Data/certificates/_wildcard.sandbox.local-key.pem"
+
+	reverse_proxy localhost:3001
+
+	log {
+		output file ./caddy.log
+	}
+}
+
 nest.sandbox.local {
 	tls "C:/Data/certificates/_wildcard.sandbox.local.pem" "C:/Data/certificates/_wildcard.sandbox.local-key.pem"
 
