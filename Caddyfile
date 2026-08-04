@@ -1,5 +1,21 @@
 # Reminder: X.509 wildcards only go one level deep, so this won't match a.b.sandbox.local ℹ️
 
+xomorf.local {
+	tls "C:/Data/certificates/xomorf.local+1.pem" "C:/Data/certificates/xomorf.local+1-key.pem"
+
+	handle /api* {
+		reverse_proxy localhost:3001
+	}
+
+	handle {
+		reverse_proxy localhost:3000
+	}
+
+	log {
+		output file ./caddy.log
+	}
+}
+
 bun.sandbox.local {
 	tls "C:/Data/certificates/_wildcard.sandbox.local.pem" "C:/Data/certificates/_wildcard.sandbox.local-key.pem"
 
@@ -79,3 +95,4 @@ medusa.sandbox.local:5174 {
 		output file ./caddy.log
 	}
 }
+
